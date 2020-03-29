@@ -32,7 +32,7 @@ class SavingAccount
 
       static void monthlyInt()
       {
-        annualInterestRate=10;
+          annualInterestRate=10;
       }
  }
 public class task2 {

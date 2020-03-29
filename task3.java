@@ -8,7 +8,7 @@ class Main{
          static double luxuryRate=0.1f;
          static double price_Main;
 
-         static double roundToNearestvalue(double price)
+         private static double roundToNearestvalue(double price)
          {
             double check  = Math.round(price * 100.0) / 100.0;
             price_Main = check;
@@ -37,12 +37,16 @@ class Main{
                return luxuryRate+newRate;
          }
 
-
+ 
+             public static double check(){
+                return roundToNearestvalue(100.4567);  
+             }
 
 }
 public class task3 {
     public static void main(String[] args) {
-        Main.roundToNearestvalue(100.4567);
+        Main obj = new Main();
+        obj.check();
         System.out.println("Rate  : "+Main.changeBasicRateTo(Main.price_Main));
         System.out.println("Tax : "+Main.changeBasicRateTo(10));
         System.out.println("Rate + Tax : "+Main.computeCostBasic(Main.price_Main));
